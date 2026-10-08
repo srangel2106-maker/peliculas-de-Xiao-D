@@ -1,0 +1,81 @@
+/*
+  Tipografía: la fuente oficial de Genshin Impact es propietaria (HoYoverse),
+  por eso se usan dos fuentes libres de aspecto similar: Cinzel (títulos) y Marcellus (texto).
+  Si tienes una licencia de la fuente original, cambia estas variables.
+*/
+:root {
+  --abyss: #0b1517;
+  --deep: #10211f;
+  --panel: #162b2d;
+  --panel-2: #1d3639;
+  --anemo: #4fd8b8;
+  --anemo-dim: #2f9c85;
+  --ivory: #ece5d8;
+  --muted: #9db3ad;
+  --gold: #d3bc8e;
+  --mask: #c24a3a;
+
+  --font-title: "Cinzel", "Marcellus", Georgia, serif;
+  --font-body: "Marcellus", Georgia, "Times New Roman", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ivory);
+  background:
+    radial-gradient(1100px 600px at 90% -10%, rgba(79, 216, 184, 0.14), transparent 60%),
+    radial-gradient(800px 500px at -10% 45%, rgba(79, 216, 184, 0.07), transparent 60%),
+    var(--abyss);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--anemo);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
